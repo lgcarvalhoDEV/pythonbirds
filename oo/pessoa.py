@@ -9,6 +9,14 @@ class Pessoa: #definição de Classe
     def cumprimentar(self):
         return f'Olá {id(self)}'
 
+    # exemplo: @staticmethod # -Utilização do decorator
+    #          def metodo_estatico():
+    #              return 42
+
+    # exemplo: @classmethod
+    #          def nome_e_atributos_de_classe(cls):
+    #              return f'{cls} - olhos {cls.olhos}'
+
 if __name__ == '__main__':
     jamile = Pessoa(nome='Jamile')
     lucas = Pessoa(jamile, nome='Lucas')
@@ -30,3 +38,5 @@ if __name__ == '__main__':
     print(jamile.olhos) # -Acessando o att através do objeto
     print(lucas.olhos)
     print(id(Pessoa.olhos), id(lucas.olhos), id(jamile.olhos))
+    #   print(Pessoa.metodo_estatico(), lucas.metodo_estatico())
+    #   print(Pessoa.nome_e_atributos_de_classe(), lucas.nome_e_atributos_de_classe())
