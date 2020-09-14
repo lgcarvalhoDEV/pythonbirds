@@ -106,7 +106,7 @@ class FaseTestes(TestCase):
 
     def teste_acabou_com_porcos_e_passaros(self):
         fase = Fase()
-        porcos = [PorcoFake(1, 1) for _ in range(2)]  # criando 2 porcos
+        porcos = [PorcoFake(1, 1) for _ in range(2)]  # criando 2 porcos - A variável da lista não é utilizada, portanto se utiliza o underline(_).
         passaros = [PassaroFake(1, 1) for _ in range(2)]  # criando 2 pássaros
         fase.adicionar_porco(*porcos)
         fase.adicionar_passaro(*passaros)
